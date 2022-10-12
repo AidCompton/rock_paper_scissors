@@ -56,15 +56,15 @@ function checkWinner(choiceP, choiceC){
         (choiceP === "paper" && choiceC == "rock") || 
         (choiceP === "scissor" && choiceC == "paper") 
     ) {
-        return "Player wins";
+        return "Player";
     } else {
-        return "Computer wins";
+        return "Computer";
     }
 }
 
 function logWins() {
-    let playerWins = winners.filter((item) => item == "Player wins").length;
-    let computerWins = winners.filter((item) => item == "Computer wins").length;
+    let playerWins = winners.filter((item) => item == "Player").length;
+    let computerWins = winners.filter((item) => item == "Computer").length;
     let ties = winners.filter((item) => item == "Tie").length;
     console.log("Results: ");
     console.log("Player Wins: ", playerWins);
@@ -76,6 +76,6 @@ function logRound(playerChoice, computerChoice, winner, round) {
     console.log('Round: ', round)
     console.log('Player Chose: ', playerChoice);
     console.log('Computer chose: ', computerChoice);
-    console.log(winner, 'Won the round');
+    console.log('Game goes to: ', winner);
 }
 game();
