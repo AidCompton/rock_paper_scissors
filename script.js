@@ -2,9 +2,10 @@ const choices = ["rock", "paper", "scissors"];
 const winners =[];
 
 function game() {
-    for (let i=1; i <= 5; i++){
-        playRound(i);
-    }
+    // for (let i=1; i <= 5; i++){
+    //     playRound(i);
+    // }
+    playRound();
     logWins();
 }
 
@@ -78,4 +79,4 @@ function logRound(playerChoice, computerChoice, winner, round) {
     console.log('Computer chose: ', computerChoice);
     console.log('Game goes to: ', winner);
 }
-game();
+
